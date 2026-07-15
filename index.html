@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENDA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            border: 1px solid white;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-950 m-0 p-0 text-gray-200 font-sans w-full min-h-screen">
+
+    <header
+        class="flex-wrap bg-gray-900 flex justify-center items-center px-8 py-4 w-full md:justify-between lg:justify-between">
+
+        <div class="flex gap-4">
+            <figure class="justify-center content-center">
+                <img class="w-12 lg:w-16" src="./logos/logo.png" alt="Logo de Senda">
+            </figure>
+            <div class="content-center">
+                <h2 class="text-2xl font-bold lg:text-4xl">SENDA</h2>
+                <p class="text-xs lg:text-sm">Software de Estandarización de Niveles y Dependencias de
+                    Aprendizaje</p>
+            </div>
+        </div>
+
+        <nav class="flex text-xs gap-2 my-5 lg:gap-5">
+            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
+                href="#">TreeMap</a>
+            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
+                href="#">Roadmaps</a>
+            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
+                href="#">Métodos</a>
+            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
+                href="#">Comparador</a>
+            <button
+                class="bg-green-500 content-center text-center p-2 border-2 border-transparent rounded-xl hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out lg:text-xl">Iniciar
+                Sesion</button>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="w-full h-screen relative overflow-hidden">
+
+            <div class="absolute h-full w-full bg-[radial-gradient(circle,_#080A0C_10%,_transparent)] z-10"></div>
+
+            <div
+                class="w-full h-full flex flex-col justify-center items-center text-center gap-5 relative z-10 md:gap-10">
+                <p class="text-2xl text-white md:text-6xl">Bienvenido a</p>
+                <h1 class="text-8xl font-bold text-white md:text-[230px]">SENDA</h1>
+                <p class="text-2xl text-white md:text-4xl">Software de Estandarización de Niveles y Dependencias de
+                    Aprendizaje
+                </p>
+
+                <button
+                    class="bg-green-500 p-2 border-2 border-transparent rounded-3xl hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-5xl md:w-auto md:h-auto md:p-5">
+                    Empezar
+                </button>
+            </div>
+
+            <video class="absolute inset-0 w-full h-full object-cover z-0" src="./videos/fondo.mp4" autoplay muted loop
+                loading="lazy"></video>
+
+        </section>
+
+        <section class="bg-gray-950 m-0">
+
+            <h2 class="m-10 text-center text-4xl font-bold md:text-6xl">Explora tu Camino Técnico</h2>
+
+            <div class="flex justify-center items-center p-10 flex-wrap gap-20">
+
+                <div
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    <img class="w-72 rounded-xl md:w-96" src="./imagenes/treemap.png" alt="Imgaen de TreeMap">
+                    <h2 class="text-3xl font-bold md:text-5xl">TREEMAP</h2>
+                    <p class="text-justify text-sm md:text-lg">
+                        Organiza y mide el nivel de tus habilidades actuales. Permite identificar de un vistazo tus
+                        puntos
+                        fuertes, las áreas que requieres reforzar y la distribución de tu conocimiento técnico dentro de
+                        tu
+                        perfil profesional.
+                    </p>
+                    <button
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                </div>
+
+                <div
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    <img class="w-72 rounded-xl md:w-96" src="./imagenes/roadmap.jpg" alt="Imgaen de TreeMap">
+                    <h2 class="text-3xl font-bold md:text-5xl">ROADMAP</h2>
+                    <p class="text-justify text-sm md:text-lg">
+                        Traza la ruta de aprendizaje ideal para tus metas. Permite estructurar los pasos necesarios para
+                        dominar una tecnología, organizar los cursos que debes tomar y medir tu progreso en cada etapa
+                        del
+                        camino.
+                    </p>
+                    <button
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                </div>
+
+                <div
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    <img class="w-72 rounded-xl md:w-96" src="./imagenes/metodos.jpg" alt="Imgaen de TreeMap">
+                    <h2 class="text-3xl font-bold md:text-5xl">Métodos</h2>
+                    <p class="text-justify text-sm md:text-lg">
+                        Aplica sistemas de estudio que potencien tu retención. Permite optimizar tus sesiones de repaso,
+                        validar qué técnicas te funcionan mejor (como Pomodoro o Feynman) y acelerar la comprensión de
+                        temas
+                        complejos.
+                    </p>
+                    <button
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                </div>
+
+                <div
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    <img class="w-72 rounded-xl md:w-96" src="./imagenes/comparador.png" alt="Imgaen de TreeMap">
+                    <h2 class="text-3xl font-bold md:text-5xl">Comparador</h2>
+                    <p class="text-justify text-sm md:text-lg">
+                        Analiza los planes de estudio de distintos centros. Permite evaluar las asignaturas de cada
+                        universidad, contrastar los enfoques de sus carreras y tomar la mejor decisión para tu futuro
+                        académico.
+                    </p>
+                    <button
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row gap-8 p-5 max-w-7xl mx-auto items-center justify-center">
+
+            <div class="flex flex-col gap-6 w-full lg:w-1/2 md:px-10 lg:px-5">
+                <h2 class="text-4xl font-bold text-center lg:text-left">¿Sobre el proyecto?</h2>
+
+                <div class="flex flex-col gap-4 items-center lg:items-stretch">
+
+                    <div
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        <h3 class="text-xl font-bold">Centralización Curricular</h3>
+                        <p class="text-lg text-justify text-gray-300">
+                            Centraliza y estructura los conocimientos exigidos en la ingeniería de sistemas, resolviendo
+                            la
+                            falta de claridad y la desarticulación en las rutas de aprendizaje académico.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        <h3 class="text-xl font-bold">Mapeo de Dependencias</h3>
+                        <p class="text-lg text-justify text-gray-300">
+                            Permite a estudiantes, autodidactas y coordinadores académicos visualizar las dependencias
+                            reales entre materias, optimizando el proceso educativo de inicio a fin.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        <h3 class="text-xl font-bold">Enfoque Global (Mercado Laboral)</h3>
+                        <p class="text-lg text-justify text-gray-300">
+                            Conecta la formación universitaria de la malla curricular con las competencias tecnológicas
+                            más
+                            críticas y demandadas por la industria global de software.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex justify-center w-full lg:w-1/2">
+                <img class="rounded-lg object-cover w-full max-w-xl lg:max-w-none shadow-2xl"
+                    src="./imagenes/mapaNodos.jpg" alt="imagen de nodos">
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
