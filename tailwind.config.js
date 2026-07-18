@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // Aquí le dices a Tailwind dónde buscar tus archivos para aplicar las clases
-    content: [
-        "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx,vue,svelte,astro,html}",
-    ],
+    darkMode: 'selector', // <-- ESTA ES LA LÍNEA CLAVE. Si usas una versión vieja (v3.0 a v3.3), escribe 'class' en su lugar.
+    content: ["./src/**/*.{html,js}"], 
     theme: {
-        extend: {}, // Aquí puedes añadir tus propios colores, fuentes, etc.
+        extend: {},
     },
     plugins: [],
 }

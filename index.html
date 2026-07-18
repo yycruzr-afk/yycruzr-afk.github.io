@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENDA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        * {
-            border: 1px solid white;
-        }
-    </style>
+    <script>
+        tailwind.config = { darkMode: 'selector' }
+    </script>
 
 </head>
 
-<body class="bg-gray-950 m-0 p-0 text-gray-200 font-sans w-full min-h-screen">
+<body class="bg-gray-950 m-0 p-0 text-gray-200 font-sans w-full min-h-screen dark:bg-slate-200">
 
     <header
-        class="flex-wrap bg-gray-900 flex justify-center items-center px-8 py-4 w-full md:justify-between lg:justify-between">
+        class="flex-wrap bg-gray-900 dark:bg-slate-300 dark:text-black flex justify-center items-center px-8 py-4 w-full md:justify-between lg:justify-between">
 
         <div class="flex gap-4">
             <figure class="justify-center content-center">
@@ -31,8 +28,28 @@
             </div>
         </div>
 
+        <div class="flex items-center gap-3 my-4 md:my-0">
+            
+            <button 
+                id="modo-switch"
+                type="button" 
+                class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-700 dark:bg-green-500" 
+                role="switch" 
+                aria-checked="false">
+                
+                <span class="sr-only">Alternar modo claro/oscuro</span>
+                
+                <!-- La bolita inicia en 'translate-x-0' (izquierda) y se mueve a 'dark:translate-x-5' (derecha) -->
+                <span 
+                    id="switch-ball"
+                    aria-hidden="true" 
+                    class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0 dark:translate-x-5">
+                </span>
+            </button>
+        </div>
+
         <nav class="flex text-xs gap-2 my-5 lg:gap-5">
-            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
+            <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl "
                 href="#">TreeMap</a>
             <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
                 href="#">Roadmaps</a>
@@ -41,7 +58,7 @@
             <a class="content-center text-center p-2 border-b-2 border-transparent rounded-xl hover:border-green-600 shadow-xl hover:shadow-green-800 transition-all duration-200 ease-in-out lg:text-xl"
                 href="#">Comparador</a>
             <button
-                class="bg-green-500 content-center text-center p-2 border-2 border-transparent rounded-xl hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out lg:text-xl">Iniciar
+                class="bg-green-500 content-center text-center p-2 border-2 border-transparent rounded-xl hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out lg:text-xl dark:text-gray-200">Iniciar
                 Sesion</button>
         </nav>
 
@@ -71,14 +88,14 @@
 
         </section>
 
-        <section class="bg-gray-950 m-0">
+        <section class="bg-gray-950 dark:bg-gray-200 dark:text-black m-0">
 
             <h2 class="m-10 text-center text-4xl font-bold md:text-6xl">Explora tu Camino Técnico</h2>
 
             <div class="flex justify-center items-center p-10 flex-wrap gap-20">
 
                 <div
-                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8 dark:bg-gray-100 dark:border-transparent dark:shadow-2xl dark:hover:bg-gray-50">
                     <img class="w-72 rounded-xl md:w-96" src="./imagenes/treemap.png" alt="Imgaen de TreeMap">
                     <h2 class="text-3xl font-bold md:text-5xl">TREEMAP</h2>
                     <p class="text-justify text-sm md:text-lg">
@@ -89,11 +106,11 @@
                         perfil profesional.
                     </p>
                     <button
-                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl dark:hover:bg-gray-200">Vamos</button>
                 </div>
 
                 <div
-                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8 dark:bg-gray-100 dark:border-transparent dark:shadow-2xl dark:hover:bg-gray-50">
                     <img class="w-72 rounded-xl md:w-96" src="./imagenes/roadmap.jpg" alt="Imgaen de TreeMap">
                     <h2 class="text-3xl font-bold md:text-5xl">ROADMAP</h2>
                     <p class="text-justify text-sm md:text-lg">
@@ -103,11 +120,11 @@
                         camino.
                     </p>
                     <button
-                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl dark:hover:bg-gray-200">Vamos</button>
                 </div>
 
                 <div
-                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8 dark:bg-gray-100 dark:border-transparent dark:shadow-2xl dark:hover:bg-gray-50">
                     <img class="w-72 rounded-xl md:w-96" src="./imagenes/metodos.jpg" alt="Imgaen de TreeMap">
                     <h2 class="text-3xl font-bold md:text-5xl">Métodos</h2>
                     <p class="text-justify text-sm md:text-lg">
@@ -117,11 +134,11 @@
                         complejos.
                     </p>
                     <button
-                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl dark:hover:bg-gray-200">Vamos</button>
                 </div>
 
                 <div
-                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8">
+                    class="flex flex-col items-center justify-center p-5 w-80 gap-5 rounded-xl bg-gray-900 border border-gray-800 hover:scale-105 hover:bg-gray-800 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-out md:gap-8 dark:bg-gray-100 dark:border-transparent dark:shadow-2xl dark:hover:bg-gray-50">
                     <img class="w-72 rounded-xl md:w-96" src="./imagenes/comparador.png" alt="Imgaen de TreeMap">
                     <h2 class="text-3xl font-bold md:text-5xl">Comparador</h2>
                     <p class="text-justify text-sm md:text-lg">
@@ -130,12 +147,12 @@
                         académico.
                     </p>
                     <button
-                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] transition-all duration-200 ease-in-out w-40 md:text-xl">Vamos</button>
+                        class="bg-green-500 p-2 border-2 border-transparent rounded-lg hover:border-green-600 hover:shadow-[0_0_20px_rgb(34,197,94)] hover:bg-[#1F2937] transition-all duration-200 ease-in-out w-40 md:text-xl dark:hover:bg-gray-200">Vamos</button>
                 </div>
             </div>
         </section>
 
-        <section class="flex flex-col lg:flex-row gap-8 p-5 max-w-7xl mx-auto items-center justify-center">
+        <section class="flex flex-col lg:flex-row gap-8 p-5 max-w-7xl mx-auto items-center justify-center dark:text-black">
 
             <div class="flex flex-col gap-6 w-full lg:w-1/2 md:px-10 lg:px-5">
                 <h2 class="text-4xl font-bold text-center lg:text-left">¿Sobre el proyecto?</h2>
@@ -143,9 +160,9 @@
                 <div class="flex flex-col gap-4 items-center lg:items-stretch">
 
                     <div
-                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none dark:border-transparent dark:shadow-xl">
                         <h3 class="text-xl font-bold">Centralización Curricular</h3>
-                        <p class="text-lg text-justify text-gray-300">
+                        <p class="text-lg text-justify text-gray-300 dark:text-black">
                             Centraliza y estructura los conocimientos exigidos en la ingeniería de sistemas, resolviendo
                             la
                             falta de claridad y la desarticulación en las rutas de aprendizaje académico.
@@ -153,18 +170,18 @@
                     </div>
 
                     <div
-                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none dark:border-transparent dark:shadow-xl">
                         <h3 class="text-xl font-bold">Mapeo de Dependencias</h3>
-                        <p class="text-lg text-justify text-gray-300">
+                        <p class="text-lg text-justify text-gray-300 dark:text-black">
                             Permite a estudiantes, autodidactas y coordinadores académicos visualizar las dependencias
                             reales entre materias, optimizando el proceso educativo de inicio a fin.
                         </p>
                     </div>
 
                     <div
-                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none">
+                        class="flex flex-col gap-3 border border-gray-700 p-5 rounded-lg shadow-lg shadow-green-900/30 w-full max-w-xl lg:max-w-none dark:border-transparent dark:shadow-xl">
                         <h3 class="text-xl font-bold">Enfoque Global (Mercado Laboral)</h3>
-                        <p class="text-lg text-justify text-gray-300">
+                        <p class="text-lg text-justify text-gray-300 dark:text-black">
                             Conecta la formación universitaria de la malla curricular con las competencias tecnológicas
                             más
                             críticas y demandadas por la industria global de software.
@@ -182,7 +199,7 @@
         </section>
     </main>
 
-    <footer class="flex flex-col p-2 bg-gray-900 gap-2">
+    <footer class="flex flex-col p-2 bg-gray-900 gap-2 dark:bg-gray-300 dark:text-black">
         <div class="flex justify-between p-5 gap-5">
             <div class="">
                 <figure>
@@ -227,6 +244,8 @@
             <p>© 2026 S.E.N.D.A. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
